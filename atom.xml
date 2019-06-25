@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mwangm.github.io/"/>
-  <updated>2018-07-20T02:02:12.000Z</updated>
+  <updated>2019-06-25T03:13:24.000Z</updated>
   <id>http://mwangm.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://mwangm.github.io/2018/07/19/hello-world/"/>
-    <id>http://mwangm.github.io/2018/07/19/hello-world/</id>
-    <published>2018-07-19T07:25:25.000Z</published>
-    <updated>2018-07-20T02:02:12.000Z</updated>
+    <link href="http://mwangm.github.io/2019/06/25/hello-world/"/>
+    <id>http://mwangm.github.io/2019/06/25/hello-world/</id>
+    <published>2019-06-25T03:13:24.000Z</published>
+    <updated>2019-06-25T03:13:24.000Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;p&gt;create personal site  by &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
         
       
     
