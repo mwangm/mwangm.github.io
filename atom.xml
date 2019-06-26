@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mwangm.github.io/"/>
-  <updated>2019-06-26T08:52:13.000Z</updated>
+  <updated>2019-06-26T08:58:31.000Z</updated>
   <id>http://mwangm.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>用户故事和敏捷方法</title>
     <link href="http://mwangm.github.io/2019/06/26/user-stories-applied/"/>
     <id>http://mwangm.github.io/2019/06/26/user-stories-applied/</id>
-    <published>2019-06-26T08:52:13.000Z</published>
-    <updated>2019-06-26T08:52:13.000Z</updated>
+    <published>2019-06-26T08:58:25.000Z</published>
+    <updated>2019-06-26T08:58:31.000Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,17 @@
       
         
         
-          &lt;h5 id=&quot;Inception&quot;&gt;&lt;a href=&quot;#Inception&quot; class=&quot;headerlink&quot; title=&quot;Inception&quot;&gt;&lt;/a&gt;Inception&lt;/h5&gt;&lt;p&gt;软件需求是一个沟通问题，需要通过交流来完成。
+          &lt;p&gt;趁项目启动前的空隙，温故一下用户故事与敏捷方法，也好为inception做准备。&lt;/p&gt;
+&lt;h5 id=&quot;Inception&quot;&gt;&lt;a href=&quot;#Inception&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
+      <category term="读书笔记" scheme="http://mwangm.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="用户故事 敏捷" scheme="http://mwangm.github.io/tags/%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B-%E6%95%8F%E6%8D%B7/"/>
     
   </entry>
   
