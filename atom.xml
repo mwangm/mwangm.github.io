@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mwangm.github.io/"/>
-  <updated>2019-06-25T03:13:24.000Z</updated>
+  <updated>2019-06-26T08:13:02.000Z</updated>
   <id>http://mwangm.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用户故事和敏捷方法</title>
+    <link href="http://mwangm.github.io/2019/06/26/%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B%E4%B8%8E%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95/"/>
+    <id>http://mwangm.github.io/2019/06/26/用户故事与敏捷方法/</id>
+    <published>2019-06-26T08:13:02.000Z</published>
+    <updated>2019-06-26T08:13:02.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;用户故事和敏捷方法读书笔记&lt;/p&gt;
+&lt;h5 id=&quot;Inception&quot;&gt;&lt;a href=&quot;#Inception&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://mwangm.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="用户故事 敏捷" scheme="http://mwangm.github.io/tags/%E7%94%A8%E6%88%B7%E6%95%85%E4%BA%8B-%E6%95%8F%E6%8D%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://mwangm.github.io/2019/06/25/hello-world/"/>
     <id>http://mwangm.github.io/2019/06/25/hello-world/</id>
-    <published>2019-06-25T03:13:24.000Z</published>
-    <updated>2019-06-25T03:13:24.000Z</updated>
+    <published>2019-06-25T09:13:36.000Z</published>
+    <updated>2019-06-25T09:13:36.000Z</updated>
     
     <summary type="html">
     
