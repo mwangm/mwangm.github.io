@@ -148,6 +148,140 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="page-implement-domain-driven-design" class="article article-type-page  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/28/implement-domain-driven-design/">实现领域驱动设计</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/28/implement-domain-driven-design/" class="archive-article-date">
+  	<time datetime="2019-06-28T08:58:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="什么是DDD"><a href="#什么是DDD" class="headerlink" title="什么是DDD"></a>什么是DDD</h5><p>软件工程的核心实质是社会工程，不同于传统的软件开发方法，DDD试图分离技术实现的复杂性，围绕业务模型来控制业务的复杂性，以解决软件难以理解，难以演化等问题。</p>
+<p>DDD的主要聚焦点在:</p>
+<ol>
+<li>领域和领域逻辑;</li>
+<li>复杂的领域设计应该基于模型;</li>
+<li>技术专家和领域专家一起进行创造性的合作， 渐进迭代式的切入问题领域的核心。</li>
+</ol>
+<h5 id="为什么需要DDD"><a href="#为什么需要DDD" class="headerlink" title="为什么需要DDD"></a>为什么需要DDD</h5><p>使领域专家和开发者一起工作，让软件准确的传达出业务规则。统一语言，让领域专家和开发人员可以听懂对方，减少鸿沟。设计就是代码，代码就是设计，让软件真正反映出领域专家的思维模型。</p>
+<h5 id="DDD如何帮助我们"><a href="#DDD如何帮助我们" class="headerlink" title="DDD如何帮助我们"></a>DDD如何帮助我们</h5><p>将领域专家和开发团队聚集在一起，创建出一套领域建模的通用语言。</p>
+<p>DDD关注业务战略，帮助定义不同团队之间的组织关系，清楚界分不同系统和业务关注点。</p>
+<p>DDD战术建模能够帮助开发人员按照领域专家的思维模式开发软件。</p>
+<p><strong>业务价值</strong>：</p>
+<p>获得一个有用的领域模型，关注核心域，识别出支撑域。</p>
+<p>通过对业务模型的讨论和改善，业务得到更加准确的定义和理解。</p>
+<p>领域专家为软件设计做出贡献，知识在开发和领域专家中互相流动。</p>
+<p>有领域专家驱动出的业务模型，可以带给用户更好的用户体验。</p>
+<p>清晰的模型边界，理解项目的限界上下文，更好了解团队和企业架构。</p>
+<p>敏捷和迭代式的持续建模。</p>
+<h5 id="实施过程"><a href="#实施过程" class="headerlink" title="实施过程"></a>实施过程</h5><ul>
+<li><p>战略建模 - 从宏观角度对整个业务进行拆分，来划分限界上下文。</p>
+</li>
+<li><p>战术建模 - 在限界上下文进行聚合、实体、值对象的建模。</p>
+</li>
+</ul>
+<p><img src="./assets/ddd-model.png" alt="domain-model"></p>
+<h5 id="战略建模"><a href="#战略建模" class="headerlink" title="战略建模"></a>战略建模</h5><ul>
+<li>限界上下文 - 代表系统，程序或者一种业务服务。通用语言和限界上下文构成了DDD的两大支柱，限界上下文和通用语言存在一一对应关系。</li>
+<li>通用语言 - 作用于一个特定的界限上下文内。</li>
+<li>领域 - 公司或者组织运作中的一切。</li>
+<li>子域 - 一个领域包含一个或者多个子域，理想状况下一个子域对应一个限界上下文, 现实情况中可能是多个；子域又分为核心域、支撑子域和通用子域。</li>
+<li>支撑子域 - 对应业务的某些重要方面，单不是核心。</li>
+<li>通用子域 - 某个支撑子域的运用范围是整个系统，那么这个子域便是通用子域。</li>
+<li>上下文映射图 - 多个限界上下文和子域组成的表示当前单个领域或者多个领域之间的集成关系图。</li>
+</ul>
+<h5 id="战术建模"><a href="#战术建模" class="headerlink" title="战术建模"></a>战术建模</h5><ul>
+<li>实体: 具有唯一标识且具有状态可变性的这么一个领域对象。</li>
+<li>值对象： 唯一身份标识和可变性是区别实体和值对象的方式。</li>
+<li>领域服务：操作多个领域对象进行业务操作或者对领域对象进行转换，过度的使用领域服务会导致贫血模型。</li>
+<li>领域事件：将领域中所发生的活动建模成一些列的离散事件，领域事件是通用语言的组成部分。领域事件可以由本地限界上下文消费，也可以由外部的限界上下文来订阅消费。“通知”可能是需要创建领域事件的一个积极信号。</li>
+<li>聚合：聚合并不只是将共享父类、密切关联的对象聚集成一个对象树。聚合表达了与事务一致性边界相同的意思。在提交事务时，边界之内的所有内容必须保持一致，边界之外的的任何东西都是与聚合不相关的。在设计聚合时，我们必须把事务考虑在内， 我们考虑的是事务的一致性边界，而不是创建一个对象树。 小聚合不仅在性能和伸缩性上的好处，还可以减少事务提交冲突，有助于事务的成功执行。</li>
+<li>工厂： 实体和聚合通常是很复杂的，这就导致了很难去通过构造器来创建对象。工厂就决解了这个问题，它把创建对象的细节封装起来。</li>
+<li>仓库：封装了获取对象的逻辑，领域对象无须和底层数据库交互，它只需要从仓库中获取对象即可。</li>
+</ul>
+<h5 id="典型DDD代码分层结构"><a href="#典型DDD代码分层结构" class="headerlink" title="典型DDD代码分层结构"></a>典型DDD代码分层结构</h5><ul>
+<li>User Interface-负责向用户展现信息，并且会解析用户行为，即常说的展现层</li>
+<li>Application - 数据业务验证、事务、多个聚合的协调操作</li>
+<li>Domain - 战术建模的体现：聚合、实体、值对象…</li>
+<li>infrastructure - 辅助支撑类库，关连具体实现，e.g 仓储、通用支撑类库</li>
+</ul>
+<h5 id="六边形架构"><a href="#六边形架构" class="headerlink" title="六边形架构"></a>六边形架构</h5><p>  <a href="https://insights.thoughtworks.cn/from-sandwich-to-hexagon/" target="_blank" rel="noopener">https://insights.thoughtworks.cn/from-sandwich-to-hexagon/</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DDD 微服务</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/读书笔记//" class="article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/28/implement-domain-driven-design/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="page-user-stories-applied" class="article article-type-page  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -462,11 +596,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">用户故事 敏捷</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">DDD 微服务</a>
               </li>
             
             <div class="clearfix"></div>
